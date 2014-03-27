@@ -19,6 +19,8 @@ var bb = {
 	model : {}
 };
 
+var  url_str="http://ec2-54-73-126-198.eu-west-1.compute.amazonaws.com"
+
 var browser = {
 	android : /Android/.test(navigator.userAgent)
 };
@@ -48,7 +50,7 @@ bb.init = function() {
 			description : "",
 			id : new Date().getTime()
 		},
-		urlRoot: 'http://10.20.102.184:50000/api/rest/todo',
+		urlRoot: url_str+'/api/rest/todo',
 		initialize : function() {
 			var self = this;
 			_.bindAll(self);
@@ -58,7 +60,7 @@ bb.init = function() {
 	bb.model.Items = Backbone.Collection.extend(_.extend({
 		model : bb.model.Item,
 		//localStorage : new Store("items"),
-		url : 'http://10.20.102.184:50000/api/rest/todo',
+		url :url_str+ '/api/rest/todo',
 		/*initialize : function() {
 			var self = this;
 			_.bindAll(self);
@@ -81,7 +83,7 @@ bb.init = function() {
 			console.log("add action:"+item);
 			item.save();
 
-		//	urlRoot : 'http://192.168.1.18:50000/api/rest/todo';
+		//	urlRoot : url_str+'/api/rest/todo';
 		}
 	}));
 
