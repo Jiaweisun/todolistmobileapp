@@ -1,0 +1,15 @@
+{
+  "name": "Assigment",
+  "description": "Mobile Web Application",
+  "author": "Jiawei Sun <sunjiawei8930@163.com>",
+  "script":{
+  	"start":"node ./lib/db-server.js"
+  	},
+  "dependencies": {
+    "mongodb": "",
+    "node-uuid":"",
+    "connect":"1.8.6",
+    "memcached":""
+
+  }
+}
